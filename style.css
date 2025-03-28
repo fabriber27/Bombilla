@@ -1,0 +1,35 @@
+@media (min-width: 20px) and (max-width: 1800px){
+    body{background-color: black;}
+}
+
+body {
+    justify-content: center;
+    height: 100%;
+}
+
+#bombilla {
+    width: 500px; /* Ajusta la mida de la bombeta */
+    margin-bottom: 20px; /* Espai entre la bombeta i els botons */
+}
+
+button {
+    background: none;
+    border: none;
+    cursor:pointer;
+    align-items:flex-end;
+    width:min-content;
+    align-self:center;
+}
+button img {
+    width: 80px; /* Ajusta la mida de les imatges dels botons */
+}
+
+
+input[type="range"] {
+    width: 150px; /* Amplada de la barra */
+    transform: rotate(270deg); /* Gira la barra en vertical */
+    
+}
+
+
+
