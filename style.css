@@ -1,35 +1,51 @@
-@media (min-width: 20px) and (max-width: 1800px){
-    body{background-color: black;}
-}
-
-body {
-    justify-content: center;
-    height: 100%;
+@media (min-width: 20px) and (max-width: 1800px) {
+    body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative; /* Per mantenir els elements centrats */
+    }
 }
 
 #bombilla {
-    width: 500px; /* Ajusta la mida de la bombeta */
-    margin-bottom: 20px; /* Espai entre la bombeta i els botons */
+    width: 500px;
+    margin-bottom: 20px;
+    position: relative; /* Necessari perquè el botó es posicioni a sobre */
+}
+
+#ences {
+    position: absolute;
+    top: 10%; /* Ajusta per centrar sobre la bombeta */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Manté el botó sobre la bombeta */
 }
 
 button {
     background: none;
     border: none;
-    cursor:pointer;
-    align-items:flex-end;
-    width:min-content;
-    align-self:center;
+    cursor: pointer;
+    width: min-content;
 }
+
 button img {
-    width: 80px; /* Ajusta la mida de les imatges dels botons */
+    width: 80px;
 }
 
-
-input[type="range"] {
-    width: 150px; /* Amplada de la barra */
-    transform: rotate(270deg); /* Gira la barra en vertical */
-    
+.barra-container {
+    position: fixed;
+    right: 30px; /* Distància des de la dreta */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-
+#intensitat {
+    width: 150px;
+    transform: rotate(270deg); /* Gira la barra per estar vertical */
+}
